@@ -1,0 +1,24 @@
+:root{
+    --card-height:500px;
+    --card-width:calc(var(--card-height)/1.5);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    margin:10px;
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    background: #191c29;
+};
+
+.card_title{
+color:darkgoldenrod;
+font-weight: 900;
+font-size: 98px;
+}
