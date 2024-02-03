@@ -6,23 +6,29 @@
 body{
     box-sizing: border-box;
     background: #191c29;
+    font-size: 98px;
+    font-weight: 100;
+    font-family: sans-serif;
+    text-align: center;
+    letter-spacing: 10px;
+    color: darkgoldenrod;
+    font-family: 'Protest Revolution', sans-serif;
 }
 
 section{
     width:100vw;
     height:100vh;
-    margin:10px;
-    display: flex;
+    margin-left:100px;
+    display:block;
     justify-content: center;
     align-items: center;
 };
 
-.titleCard{
-    align-items: center;
-    color: darkgoldenrod;
-    font-size: 98px;
+.section > .title-card{
+    
 }
 
+/*
 .card{
     width: var(--card-width);
     height: var(--card-height);
@@ -32,7 +38,7 @@ section{
     align-items: flex-end;
     padding: 0 36px;
     perspective:2500px;
-    /*margin:0 50px;*/
+    margin:0 50px;
 };
 
 .cover-image{
@@ -115,3 +121,4 @@ section{
     opacity: 1;
     transform: translate3d(0%, -30%, 100px);
 };
+*/
