@@ -7,10 +7,21 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
 }
 
 body{
+    /*width: 100vw;
+    height: 100vh;*/
     background: #191c29;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 98px;
     font-weight: 100;
     font-family: sans-serif;
@@ -21,73 +32,60 @@ body{
 }
 
 section{
-    width:100vw;
-    height:100vh;
     margin-left:100px;
-    display:flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 };
 
-img{
-    display:block;
-    max-width:100%;
-}
-
-.wrapper{
+.card {
+    position: relative;
+    width: var(--card-width);
+    height: var(--card-height);
     display: flex;
-    align-items: center;
     justify-content: center;
-}
+    align-items: flex-end;
+    padding: 0 36px;
+    perspective: 2500px;
+    margin: 0 50px;
+};
 
-.cover-image{
-    height: 100%;
-    animation: rotateX 1500ms infinite alternate ease-in-out 1000ms;
-}
+.wrapper {
+    position: absolute;
+    transition: all 500ms transform;
+    width: 100%;
+    z-index: -1;
+};
 
-.cover-image:hover{
+.card:hover .wrapper {
     transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
     box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
 }
 
-
-/*.card{
-    width: var(--card-width);
-    height: var(--card-height);
-    position: relative;
-    display:flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 0 36px;
-    perspective:2500px;
-    margin:0 50px;
-    background-image: url('https: //ggayane.github.io/css-experiments/cards/dark_rider-cover.jpg'), 
-    url('https: //ggayane.github.io/css-experiments/cards/dark_rider-title.png')
-};
-/*
-.cover-image{
-    width:100%;
-    height:100%;
+.cover-image {
+    /*height: 100%;
+    width: 100%;*/
     object-fit: cover;
-};
+    animation: rotateX 3500ms infinite alternate ease-in-out 3000ms;
+}
 
-.wrapper{
-    transition: all 0.5s;
+
+.title {
+    /*width: 100%;*/
     position: absolute;
-    width: 100%;
-    z-index: -1;
-};
+    top: 1600px;
+    left: 1300px;
+    transition: transform 500ms;
+}
 
-.card:hover .wrapper{
-    transform:perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
-    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-};
+.card:hover .title {
+    transform: translate3d(0%, -200px, 100px);
+}
 
+
+
+
+/*
 .wrapper::before,
 .wrapper::after{
     content: '';
@@ -128,13 +126,6 @@ img{
 .card:hover .wrapper::after{
     height:120px;
 }
-.title{
-    width:100%;
-    transition: transfrom 0.5s;
-}
-.card:hover .title{
-    transform: translate3d(0%, -50px, 100px);
-};
 
 .character{
     width:100%;
