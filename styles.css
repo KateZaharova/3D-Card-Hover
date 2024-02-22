@@ -50,13 +50,15 @@ section{
 
 .wrapper {
     position: absolute;
-    transition: all 500ms transform;
+    /*transition: all 500ms transform;*/
+    transition: transform 500ms;
     width: 100%;
     z-index: -1;
 };
 
 .card:hover .wrapper {
-    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    transform: translate3d(0%, -200px, 100px);
+    /*transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);*/
     box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
@@ -66,9 +68,24 @@ section{
     /*height: 100%;
     width: 100%;*/
     object-fit: cover;
-    animation: rotateX 3500ms infinite alternate ease-in-out 3000ms;
+   
+   /* animation-name: magic;
+    animation-duration: 3500ms;
+    animation-timing-function: linear;
+    animation-delay: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: 3000ms;*/
 }
 
+/*@keyframes magic{
+0%{
+
+}
+100%{
+
+}
+};*/
 
 .title {
     /*width: 100%;*/
